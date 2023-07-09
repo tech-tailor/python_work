@@ -9,7 +9,6 @@ class Guessing_game:
 
     def generate_random_num(self):
         self.random_num = random.randint(self.start_range, self.end_range )
-        print(f'the generated random number is: {self.random_num}')
 
     def user_input(self):
         return int(input(f'Enter a Guess between {self.start_range} and {self.end_range}\n'))
@@ -21,14 +20,13 @@ class Guessing_game:
     def play_game(self):
         self.generate_random_num()    #to use the random funct, this was called 
         Attempt = 0
-        remain_attempt = 3
+        remain_attempt = self.no_of_attempts
 
         while True:
+            print(f'you have {remain_attempt} Rounds to guess the correct Number')
+            remain_attempt -= 1
             guess = Game.user_input()
             Attempt += 1
-            remain_attempt -= 1
-            print(f'you have {remain_attempt} Rounds to guess the correct Number')
-            
 
 
             if guess == self.random_num:
@@ -49,5 +47,5 @@ class Guessing_game:
 
 
 
-Game = Guessing_game(0, 5, 3)
+Game = Guessing_game(0, 20, 5)
 guess = Game.play_game()
