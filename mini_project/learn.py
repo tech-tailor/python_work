@@ -20,12 +20,8 @@ print(Person('Akin', 'fair', 31, 'male'))
 Person('Akin', 'fair', 31, 'male').cus_name()
 
 
-class worker(Person):
-    def __init__(prop, job_type, address):
-        Person.__init__(name, color, age, sex)
 
 
 
-worker('Niyi', 'Red',).cus_name()
 
 
