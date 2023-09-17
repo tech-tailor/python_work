@@ -2,4 +2,4 @@ def add(*args):
     for a in (args):
         print(a)
 
-add(6,7)
+add(6,7, 90, 876)
